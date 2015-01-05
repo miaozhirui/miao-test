@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <style>
+            {literal}
+              table {
+                 width:300px;
+
+                 /*text-align: center;*/
+                 border-collapse: collapse;
+              }
+              a{
+                text-decoration: none;
+              }
+              a:hover{
+                background:red;
+                color:white;
+              }
+            {/literal}
+            </style>
+    </head>
+    <body>
+    	<table border=1 align="center">
+    		<tr>
+    			<th colspan='5'>学生记录</th>
+    		</tr>
+                          <tr>
+                              <td colspan="5">
+                                  <a href="?c=index&m=add">添加学生</a>
+                              </td>
+                          </tr>
+    		{section loop=$stu name=s}
+    		<tr>
+    			<td>{$stu[s].sname}</td>
+                                        <td> {$stu[s].sex}  </td>
+                                        <td>{$stu[s].age}</td>
+                                        <td><a href="?c=index&m=del&sid={$stu[s].sid}">删除</a></td>
+                                        <td><a href="?c=index&m=save&sid={$stu[s].sid}">更新</a></td>
+    		</tr>
+    		{/section}
+    	</table>
+    </body>
+</html>

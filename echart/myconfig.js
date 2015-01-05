@@ -1,0 +1,1 @@
+app.addIn({name: 'locationCompany', path: 'location.js', rely: ['Controller']});

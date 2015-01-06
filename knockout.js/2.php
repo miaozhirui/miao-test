@@ -14,7 +14,7 @@
                 var value = ko.utils.unwrapObservable(viewAccessor());
                 var element = document.querySelector('body');
                 if(value) {
-                   element.style.background='red';
+                   element.style.background='red'; 
                 } else {
                     element.style.background = "green"
                 }

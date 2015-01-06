@@ -16,7 +16,7 @@
                 if(value) {
                    element.style.background='red';  
                 } else {
-                    element.style.background = "green"
+                    element.style.background = "green"  
                 }
             }
         }

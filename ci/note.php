@@ -12,3 +12,4 @@ $this->load->helper('form');
 form_error('title', '<span>', '</span>')//提示错误信息,第二三参数是错误信息放的标签
 set_value('title')//保留默认的填写的内容
 111112223333333333322
+111111

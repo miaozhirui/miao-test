@@ -10,4 +10,12 @@ class Admin extends CI_Controller{
     public function index() {
         $this->load->view('admin/index.html');
     }
+    /**
+     * 默认欢迎
+     */
+
+    public function copy() {
+        $this->load->view('admin/copy.html');
+    }
+
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/style/admin/css/public.css">
+    <style>
+        span{
+            color:red;
+        };
+    </style>
+</head>
+<body>
+    <form action="<?php echo site_url('admin/article/send') ?>" method='post' enctype="multipart/form-data">
+    <table class="table">
+        <tr>
+            <td colspan="10"  class="th">发表文章</td>
+        </tr>
+        <tr>
+            <td>标题</td>
+            <td>
+                <input type="text" name="title" value="<?php echo set_value('title') ?>">
+                <?php echo form_error('title', '<span>', '</span>')?>
+            </td>
+        </tr>
+        <tr>
+            <td>类型</td>
+            <td>
+                <input type="radio">普通
+                <input type="radio">热门
+            </td>
+        </tr>
+        <tr>
+            <td>栏目</td>
+            <td>
+                <select name="" id="">
+                    <option value="">情感</option>
+                    <option value="">生活</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>缩略图</td>
+            <td>
+                <input type="file">
+            </td>
+        </tr>
+        <tr>
+            <td>摘要</td>
+            <td>
+                <textarea name="" id="" style="width:550px; height:160px;" ></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td>
+                <textarea name="" id="" style="width:550px; height:160px;" ></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="10">
+                <input type="submit" class"input_button" value="发布文章">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+
+
+
+

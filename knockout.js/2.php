@@ -14,9 +14,9 @@
                 var value = ko.utils.unwrapObservable(viewAccessor());
                 var element = document.querySelector('body');
                 if(value) {
-                   element.style.background='red';  
+                   // element.style.background='red';  
                 } else {
-                    element.style.background = "green"  
+                    // element.style.background = "green"  
                 }
             }
         }
@@ -32,6 +32,7 @@
         ko.bindingHandlers.slideVisible = {
             //自定义绑定的时候初始化的值
             init: function(element, currentValue, allBindings, viewModel) {
+                // document.querySelector('body').style.background='blue'
                 console.log(element)//获得当前所绑定的元素
                 console.log(currentValue) //获得当前绑定的属性值，是一个函数，运行之后currentValue()可以获得当前的viewmodel里面绑定的值，如果这个值设置了observable的话，那么就无法得到了，不许通过下面的方式来获得
                 console.log(ko.utils.unwrapObservable(currentValue()))//获得当前属性绑定的值，无论有没有observable都可以得到

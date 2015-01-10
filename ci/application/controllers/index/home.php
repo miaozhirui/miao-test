@@ -1,10 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Home extends CI_Controller{
+    /**
+     * 默认控制器方法
+     * @return [type] [description]
+     */
     public function index() {
-        // echo base_url() . 'style/index/css';
-        echo site_url() . '/index/home/category';
-        $this->load->view('index/index.html');
+        $_SESSION['name'] = 'miaozhirui';
+       $this->load->view('index/home.html');
     }
 
     /**
@@ -15,9 +18,16 @@ class Home extends CI_Controller{
     }
 
     /**
-     * 文章阅读页显示
+     * 文章详情页
      */
     public function article() {
-        $this->load->view('index/atricle.html');
+        $this->load->view('index/article.html');
     }
+
+
+
+
+
+
+
 }

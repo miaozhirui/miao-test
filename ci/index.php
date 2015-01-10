@@ -1,5 +1,5 @@
 <?php
-
+header("Content-type:text/html; charset=urf8");
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT

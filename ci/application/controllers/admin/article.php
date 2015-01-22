@@ -16,10 +16,8 @@ class Article extends CI_Controller{
         header('Content-type:text/html; charset=utf8');
         //载入验证类
         $this->load->library('form_validation');
-        // 设置规则和
-        $this->form_validation->set_rules('title', ' ', 'required|min_length[5]');
         //执行验证
-        $status = $this->form_validation->run();
+        $status = $this->form_validation->run('article');
 
         if($status) {
             echo '数据库操作';
@@ -28,6 +26,38 @@ class Article extends CI_Controller{
              $this->load->view('admin/article.html');
         }
      }
+
+     /**
+      * 编辑文章
+      */
+     public function edit_article() {
+        $this->load->helper('form');
+        $this->load->view('admin/edit_article.html');
+     }
+
+     /**
+      * 编辑动作
+      */
+     public function edit() {
+            //载入验证类
+        $this->load->library('form_validation');
+         //执行验证
+        $status = $this->form_validation->run('article');
+
+        if($status) {
+            echo '数据库操作';
+        } else {
+            $this->load->helper('form');
+            $this->load->view('admin/edit_article.html');
+        }
+
+     }
+
+
+
+
+
+
 }
 
 

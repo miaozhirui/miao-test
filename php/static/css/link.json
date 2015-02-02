@@ -1,4 +1,0 @@
-{
-    "GLOBAL": ["reset.css", "global.css", "lib.css"],
-    "content": ["content.css"]
-}
